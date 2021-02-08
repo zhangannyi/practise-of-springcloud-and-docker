@@ -30,7 +30,6 @@ public class EurekaClientApplication {
     }
 
     /**
-     *  TODO: 2021/2/7
      * 实现前端页面访问http://localhost:8762/loveYiEr?name=lwd
      * 返回lwd love yier
      * int char double float boolean byte String
@@ -41,4 +40,14 @@ public class EurekaClientApplication {
     public String anyi(@RequestParam (value ="name",defaultValue = "anyi") String zhanganyi){
         return zhanganyi+" love yier";
     }
+    /**
+     * todo zhanganyi write a method in this scope
+     * input : name ,password
+     * example : http://localhost:8762/login?name=anyi&password=lwd
+     * return : success to log in
+     * example : http://localhost:8762/login?name=anyi&password=gansulaodi
+     * return : fail to log in
+     */
+
+
 }
