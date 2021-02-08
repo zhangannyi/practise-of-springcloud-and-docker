@@ -28,4 +28,17 @@ public class EurekaClientApplication {
     public String helloWorldEurekaClient(@RequestParam(value = "name",defaultValue = "liwudi") String name ){
         return "HelloWorld "  + name +" i am port " + port;
     }
+
+    /**
+     *  TODO: 2021/2/7
+     * 实现前端页面访问http://localhost:8762/loveYiEr?name=lwd
+     * 返回lwd love yier
+     * int char double float boolean byte String
+     * if while for
+     *
+     */
+    @RequestMapping("/loveYiEr")
+    public String anyi(@RequestParam (value ="name",defaultValue = "anyi") String zhanganyi){
+        return zhanganyi+" love yier";
+    }
 }
