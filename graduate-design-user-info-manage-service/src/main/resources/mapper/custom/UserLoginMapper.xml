@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.liwudi.graduatedesignuserinfomanage.mapper.UserLoginMapper">
+    <select id="getUserInfoByIndex" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.UserLogin"
+            resultType="fun.liwudi.graduatedesignuserinfomanage.domain.UserInfo">
+        select ui.id as id, ui.user_name as userName ,
+               ui.user_code as userCode, ui.delete_flag as deleteFlag,
+               ui.password as passWord, ui.id_card as idCard
+        from user_info ui
+        where ui.user_code = #{userCode} and ui.password=#{passWord};
+    </select>
+</mapper>
