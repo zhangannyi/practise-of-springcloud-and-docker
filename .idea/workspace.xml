@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e932b05-410e-4a8a-8fb1-e0f2cfc087f3" name="Default" comment="feign-hystrix">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/java/fun/liwudi/eurekaclient/rest/LoginRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/src/main/java/fun/liwudi/eurekaclient/rest/LoginRest.java" afterDir="false" />
-    </list>
+    <list default="true" id="3e932b05-410e-4a8a-8fb1-e0f2cfc087f3" name="Default" comment="feign-hystrix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -422,7 +419,7 @@
       <workItem from="1612768137657" duration="4742000" />
       <workItem from="1612777047827" duration="12332000" />
       <workItem from="1612836686806" duration="474000" />
-      <workItem from="1612837200783" duration="397000" />
+      <workItem from="1612837200783" duration="705000" />
     </task>
     <task id="LOCAL-00001" summary="first commit:&#10;init springboot project&#10;realize HelloWorld">
       <created>1610286112337</created>
