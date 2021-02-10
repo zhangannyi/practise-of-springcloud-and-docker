@@ -6,20 +6,12 @@ import java.math.BigDecimal;
  * @author 李武第
  */
 public class CompanyConf {
-    int id;
+
     String companyName;
     String companyCode;
     String areaIp;
     BigDecimal areaGpsX;
     BigDecimal areaGpsY;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getCompanyName() {
         return companyName;
@@ -64,8 +56,7 @@ public class CompanyConf {
     @Override
     public String toString() {
         return "CompanyConf{" +
-                "id=" + id +
-                ", companyName='" + companyName + '\'' +
+                "companyName='" + companyName + '\'' +
                 ", companyCode='" + companyCode + '\'' +
                 ", areaIp='" + areaIp + '\'' +
                 ", areaGpsX=" + areaGpsX +

@@ -4,20 +4,14 @@ package fun.liwudi.graduatedesignuserinfomanage.domain;
  * @author 李武第
  */
 public class UserInfo {
-    Integer id;
+
     String userName;
     String userCode;
     String deleteFlag;
     String passWord;
     String idCard;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getUserName() {
         return userName;
@@ -62,8 +56,7 @@ public class UserInfo {
     @Override
     public String toString() {
         return "UserInfo{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
+                "userName='" + userName + '\'' +
                 ", userCode='" + userCode + '\'' +
                 ", deleteFlag='" + deleteFlag + '\'' +
                 ", passWord='" + passWord + '\'' +

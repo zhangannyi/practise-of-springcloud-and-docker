@@ -6,4 +6,5 @@ package fun.liwudi.graduatedesignuserinfomanage.constants;
 public interface Constants {
      String SUCCESS ="success";
      String FAIL = "fail";
+     String COMPANY_CODE_EMPTY = "company code is empty";
 }

@@ -2,6 +2,8 @@ package fun.liwudi.graduatedesignuserinfomanage.service;
 
 import fun.liwudi.graduatedesignuserinfomanage.domain.CompanyConf;
 
+import java.util.List;
+
 /**
  * @author 李武第
  */
@@ -31,4 +33,6 @@ public interface CompanyManageService {
      * @return
      */
     CompanyConf selectCompanyConf(CompanyConf companyConf);
+
+    List<CompanyConf> selectCompanyConfs(CompanyConf companyConf);
 }
