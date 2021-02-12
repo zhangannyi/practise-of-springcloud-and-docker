@@ -2,6 +2,7 @@ package fun.liwudi.graduatedesignverifyservice.service;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import fun.liwudi.graduatedesignverifyservice.domain.JsonResponse;
+import fun.liwudi.graduatedesignverifyservice.domain.VerifyInfo;
 
 import java.math.BigDecimal;
 
@@ -10,6 +11,6 @@ import java.math.BigDecimal;
  */
 public interface VerifyService {
 
-
+    JsonResponse getCheckInfo(VerifyInfo verifyInfo);
 
 }

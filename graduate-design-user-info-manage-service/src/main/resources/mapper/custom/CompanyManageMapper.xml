@@ -30,7 +30,7 @@
     </update>
     <select id="selectCompanyConf" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.CompanyConf" resultType="fun.liwudi.graduatedesignuserinfomanage.domain.CompanyConf">
         select cc.company_code as companyCode,cc.company_name as companyName,
-               cc.area_ip as areaIp,cc.area_gps_y as areaGpsX,cc.area_gps_y as areaGpsY
+               cc.area_ip as areaIp,cc.area_gps_x as areaGpsX,cc.area_gps_y as areaGpsY
         from company_conf cc
         where delete_flag=0
         <if test="companyCode != null and companyCode!=''">
