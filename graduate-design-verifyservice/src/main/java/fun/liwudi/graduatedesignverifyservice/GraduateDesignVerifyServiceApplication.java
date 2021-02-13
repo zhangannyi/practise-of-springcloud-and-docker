@@ -1,7 +1,6 @@
-package fun.liwudi.graduatedesignuserinfomanage;
+package fun.liwudi.graduatedesignverifyservice;
 
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -13,15 +12,15 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author 李武第
  */
 @SpringBootApplication
-@EnableZuulProxy
-@MapperScan("fun.liwudi.graduatedesignuserinfomanage.mapper")
-@EnableFeignClients
-@EnableDiscoveryClient
 @EnableEurekaClient
-public class GraduateDesignUserInfoManageApplication {
+@EnableDiscoveryClient
+@EnableFeignClients
+@MapperScan("fun.liwudi.graduatedesignverifyservice.mapper")
+@EnableZuulProxy
+public class GraduateDesignVerifyServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GraduateDesignUserInfoManageApplication.class, args);
+        SpringApplication.run(GraduateDesignVerifyServiceApplication.class, args);
     }
 
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.liwudi.graduatedesignuserinfomanage.mapper.CheckInfoMapper">
+    <insert id="addCheckInfo" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.CheckInfo">
+        insert into check_info(user_code, check_area_x, check_ip, check_area_y, company_code,check_success,check_date)
+        values (#{userCode},#{checkAreaX},#{checkIp},#{checkAreaY},#{companyCode},#{checkSuccess},#{checkDate});
+    </insert>
+
+    <select id="selectOneCheckInfo" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.CheckInfo" resultType="fun.liwudi.graduatedesignuserinfomanage.domain.CheckInfo">
+        select user_code as userCode,  check_success as checkSuccess,
+               check_area_x as checkAreaX, check_ip as checkIp,
+               delete_flag as deleteFlag,check_area_y as checkAreaY,
+               company_code as companyCode, check_date as checkDate
+        from check_info ci
+        where delete_flag = 0
+        <if test="userCode != null and userCode!=''">
+            and user_code = #{userCode}
+        </if>
+        <if test="checkSuccess != null and checkSuccess!=''">
+            and check_success = #{checkSuccess}
+        </if>
+        <if test="checkAreaX != null and checkAreaX!=''">
+            and check_area_x = #{checkAreaX}
+        </if>
+        <if test="checkIp != null and checkIp!=''">
+            and check_ip = #{checkIp}
+        </if>
+        <if test="deleteFlag != null and deleteFlag!=''">
+            and delete_flag = #{deleteFlag}
+        </if>
+        <if test="checkAreaY != null and checkAreaY!=''">
+            and check_area_y = #{checkAreaY}
+        </if>
+        <if test="companyCode != null and companyCode!=''">
+            and company_code = #{companyCode}
+        </if>
+        <if test="checkDate != null and checkDate!=''">
+            and check_date = #{checkDate}
+        </if>
+        limit 1
+
+    </select>
+
+    <select id="selectCheckInfosByUserCode" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.CheckInfo" resultType="fun.liwudi.graduatedesignuserinfomanage.domain.CheckInfo">
+        select user_code as userCode,  check_success as checkSuccess,
+        check_area_x as checkAreaX, check_ip as checkIp,
+        delete_flag as deleteFlag,check_area_y as checkAreaY,
+        company_code as companyCode, check_date as checkDate
+        from check_info ci
+        where delete_flag = 0
+        <if test="userCode != null and userCode!=''">
+            and user_code = #{userCode}
+        </if>
+    </select>
+
+    <select id="selectCheckInfosByCompanyCode" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.CheckInfo" resultType="fun.liwudi.graduatedesignuserinfomanage.domain.CheckInfo">
+        select user_code as userCode,  check_success as checkSuccess,
+        check_area_x as checkAreaX, check_ip as checkIp,
+        delete_flag as deleteFlag,check_area_y as checkAreaY,
+        company_code as companyCode, check_date as checkDate
+        from check_info ci
+        where delete_flag = 0
+        <if test="companyCode != null and companyCode!=''">
+            and company_code = #{companyCode}
+        </if>
+    </select>
+</mapper>

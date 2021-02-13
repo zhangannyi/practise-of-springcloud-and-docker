@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.liwudi.graduatedesignuserinfomanage.mapper.UserCompanyMapper">
+
+    <insert id="addUserToCompany" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf">
+        insert into user_conf (user_code, company_code)
+        values (#{userCode},#{companyCode});
+    </insert>
+
+    <update id="deleteUserCompany" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf">
+        update user_conf set delete_flag = 1
+        where user_code=#{userCode} and company_code = #{companyCode};
+    </update>
+
+    <select id="selectUserCompany" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf" resultType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf">
+        select user_code as userCode, company_code as companyCode
+        from user_conf uc
+        where delete_flag =0
+        <if test="userCode != null and userCode!=''">
+            and user_code = #{userCode}
+        </if>
+        <if test="companyCode != null and companyCode!=''">
+            and company_code = #{companyCode}
+        </if>
+        limit 1
+    </select>
+
+    <select id="selectByUserCode" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf" resultType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf">
+        select user_code as userCode, company_code as companyCode
+        from user_conf uc
+        where delete_flag =0
+        <if test="userCode != null and userCode!=''">
+            and user_code = #{userCode}
+        </if>
+    </select>
+
+    <select id="selectByCompanyCode" parameterType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf" resultType="fun.liwudi.graduatedesignuserinfomanage.domain.UserConf">
+        select user_code as userCode, company_code as companyCode
+        from user_conf uc
+        where delete_flag =0
+        <if test="companyCode != null and companyCode!=''">
+            and company_code = #{companyCode}
+        </if>
+    </select>
+
+</mapper>
